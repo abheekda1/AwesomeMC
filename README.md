@@ -1,24 +1,13 @@
 # AwesomeMC
 A simple Discord bot using Discord.js that sends a message on the status of a Minecraft (including mods, players, version) using the Minecraft Server Status API.
 
-### DISCLAIMER: THIS BOT DOES NOT WORK ON MULTIPLE SERVERS DUE TO THE VARIABLES BEING SERVER-SIDED (working on a fix).
-A simple workaround would be to make multiple bots using this same code to use for different servers.
+### ~~DISCLAIMER: THIS BOT DOES NOT WORK ON MULTIPLE SERVERS DUE TO THE VARIABLES BEING SERVER-SIDED (working on a fix).~~ NOW FIXED!
 
-This bot is coded in Discord.js and can be run with the following command:
+This bot is coded in Discord.js and can be installed and run with the following command:
 ```
-node --inspect bot.js
-```
-If it crashes due to a lack of RAM, more can be allocated like so:
-```
-node --inspect --max-old-space-size=[size in MB] bot.js
+sudo npm i -g awesomemc && awesomemc [BOT TOKEN]
 ```
 
-_Before running it, make sure you add your own Bot Token on the last line!_
-Also, don't forget to install the dependencies: node-fetch and discord.js using
-```
-npm install [package name]
-```        
+To use it in the Discord server, it must first be added by going to [the Discord developer portal](https://discord.com/developers/applications/), creating an application, a bot, then creating an OAuth link and using it to add the bot to your server. Once it's added, it can give information for a specific server by running the command `mc connect your.server.name`. It will send its information in the same channel you initialized it in, which updates every 10 seconds. By default, it will list the status of the server, the address, the MOTD, the Minecraft version it's running, all of the mods in list form, the number of people online, and a list of the people online (if that's available).
 
-To use it in the Discord server, it must first be added by going to [the Discord developer portal](https://discord.com/developers/applications/), creating an application, a bot, then creating an OAuth link and using it to add the bot to your server. Once it's added, it can give information for a specific server by running the command `!connect your.server.name`. It needs a channel named `server-status` for it to send its information, which updates every 10 seconds. By default, it will list the status of the server, the address, the MOTD, the Minecraft version it's running, all of the mods in list form, the number of people online, and a list of the people online (if that's available).
-
-If you liked this bot and it helped you out, please star this repository :)
+If you liked this bot and it helped you out, please don't forget to star this repository :)

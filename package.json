@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "node-fetch": "^2.6.1"
+  },
+  "name": "awesomemc",
+  "description": "A simple Discord bot using Discord.js that sends a message on the status of a Minecraft (including mods, players, version) using the Minecraft Server Status API.",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "devDependencies": {},
+  "bin": {
+    "awesomemc": "./bot.js"
+  },
+  "scripts": {
+    "test": "node bot.js randomtoken"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADawesomeguy/AwesomeMC.git"
+  },
+  "keywords": [
+    "minecraft",
+    "discord",
+    "bot"
+  ],
+  "author": "Abheek Dhawan",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ADawesomeguy/AwesomeMC/issues"
+  },
+  "homepage": "https://github.com/ADawesomeguy/AwesomeMC#readme"
+}

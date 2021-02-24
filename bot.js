@@ -57,13 +57,15 @@ client.on('message', async message => {
                                     var people = "Hidden"
                                 }
                                 //msg.edit(`**Address: \`${data.hostname}\`**\n**Online: \`${data.online}\`** \`${data.motd.clean}\` \n**Version: \`${data.version}\`** \n**Mods:** \`\`\`\n${mods.replace(/,/g, "\n\n").replace(/\"/g, "").replace(/\[/g, "").replace(/\]/g, "").replace(/\{/g, "").replace(/\}/g, "")}\`\`\`\n**People Online: ${data.players.online}** \`\`\`\n${people.replace(/,/g, "\n").replace(/\"/g, "").replace(/\[/g, "").replace(/\]/g, "")}\`\`\``);
-                                msg.edit(new Discord.MessageEmbed().addFields(
-                                    {name: 'Hostname', value: `\`${data.hostname}\``},
-                                    {name: 'Online', value: `\`${data.online}\``},
-                                    {name: 'MOTD', value: `\`${data.motd.clean}\``},
-                                    {name: 'Version', value: `\`${data.version}\``},
-                                    {name: 'Mods', value: `\`${mods}\``}
-                                ))
+                                if (msg) {
+                                    msg.edit(new Discord.MessageEmbed().addFields(
+                                        {name: 'Hostname', value: `\`${data.hostname}\``},
+                                        {name: 'Online', value: `\`${data.online}\``},
+                                        {name: 'MOTD', value: `\`${data.motd.clean}\``},
+                                        {name: 'Version', value: `\`${data.version}\``},
+                                        {name: 'Mods', value: `\`${mods}\``}
+                                    ))
+                                }
                             });
                     }, 5000);
                 })
